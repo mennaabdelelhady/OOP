@@ -20,7 +20,7 @@ class RoomManagement {
 
     newRoom.setNumber(roomNumber);
     newRoom.setNumberOfBeds(numberOfBeds);
-    newRoom.setPrice(price);
+    newRoom.price = price;
 
     dataStore.rooms.add(newRoom);
   }
@@ -29,7 +29,7 @@ class RoomManagement {
 
     for(Room room : dataStore.rooms) {
 
-      if(room.getNumber == roomNumber) {
+      if(room.number == roomNumber) {
 
         dataStore.rooms.remove(room);
       }
@@ -50,7 +50,7 @@ class RoomManagement {
 
     for (Room room : availableRooms) {
 
-      System.out.println(room.getNumber + "\t\t\t\t" + room.getNumberOfBeds + "\t\t\t\t" + room.getPrice);
+      System.out.println(room.number + "\t\t\t\t" + room.numberOfBeds + "\t\t\t\t" + room.price);
     }
   }
 
@@ -59,13 +59,13 @@ class RoomManagement {
     Room selectedRoom = null;
     for(Room room : dataStore.rooms) {
 
-      if(room.getNumber == roomNumber) {
+      if(room.number == roomNumber) {
 
         selectedRoom = room;
       }
     }
 
-    selectedRoom.setReserved(true);
+    selectedRoom.isReserved = true;
     selectedRoom.reservationStartDate = LocalDate.now();
     selectedRoom.reservationEndDate = LocalDate.now().plusDays(reservationDays);
     selectedRoom.customerId = customerId;

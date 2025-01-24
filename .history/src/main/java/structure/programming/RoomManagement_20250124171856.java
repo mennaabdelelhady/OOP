@@ -65,7 +65,7 @@ class RoomManagement {
       }
     }
 
-    selectedRoom.setReserved(true);
+    selectedRoom.isReserved = true;
     selectedRoom.reservationStartDate = LocalDate.now();
     selectedRoom.reservationEndDate = LocalDate.now().plusDays(reservationDays);
     selectedRoom.customerId = customerId;

@@ -59,13 +59,13 @@ class RoomManagement {
     Room selectedRoom = null;
     for(Room room : dataStore.rooms) {
 
-      if(room.getNumber == roomNumber) {
+      if(room.number == roomNumber) {
 
         selectedRoom = room;
       }
     }
 
-    selectedRoom.setReserved(true);
+    selectedRoom.isReserved = true;
     selectedRoom.reservationStartDate = LocalDate.now();
     selectedRoom.reservationEndDate = LocalDate.now().plusDays(reservationDays);
     selectedRoom.customerId = customerId;
