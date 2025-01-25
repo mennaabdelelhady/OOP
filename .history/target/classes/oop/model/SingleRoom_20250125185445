@@ -1,0 +1,8 @@
+package oop.model;
+
+public class SingleRoom extends Room{
+    public SingleRoom(int roomNumber, int price) {
+        super(roomNumber, price);
+    }
+
+}
