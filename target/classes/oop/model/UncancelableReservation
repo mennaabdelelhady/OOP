@@ -1,0 +1,12 @@
+package oop.model;
+
+public class UncancelableReservation extends Reservation{
+    public UncancelableReservation(Room room,Client client,LocalDate reservationStartDate,LocalDate reservationEndDate) {
+        super(room, client, reservationStartDate, reservationEndDate);
+    }
+
+    public boolean cancel() {
+        return false;
+    }
+
+}
