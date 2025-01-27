@@ -1,0 +1,18 @@
+package oop.model;
+
+public class cancelableReservation extends Reservation{
+    private boolean isCancelable;
+
+    public cancelableReservation(int reservationNumber, Room room, String guestName, String startDate, String endDate, boolean isCancelable) {
+        super(reservationNumber, room, guestName, startDate, endDate);
+        this.isCancelable = isCancelable;
+    }
+
+    public boolean getIsCancelable(){
+        return isCancelable;
+    }
+
+    public void setIsCancelable(boolean isCancelable){
+        this.isCancelable = isCancelable;
+    }
+}
