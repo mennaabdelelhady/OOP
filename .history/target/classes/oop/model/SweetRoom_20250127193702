@@ -1,0 +1,18 @@
+package oop.model;
+
+public class SweetRoom extends Room{
+
+    private String amenities;
+
+    public SweetRoom(int number,int numberOfBeds,double price,string amenities) {
+        super(number, numberOfBeds, price);
+    }
+
+    public String getAmenities(){
+        return amenities;
+    }
+    public void setAmenities(String amenities) {
+        this.amenities = amenities;
+    }
+
+}

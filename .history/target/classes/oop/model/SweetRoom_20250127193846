@@ -1,0 +1,28 @@
+package oop.model;
+
+public class SweetRoom extends Room{
+
+    private String amenities;
+
+    private double taxMultiplier;
+
+    public SweetRoom(int number,int numberOfBeds,double price,string amenities) {
+        super(number, numberOfBeds, price);
+        this.amenities = amenities;
+    }
+
+    public String getAmenities(){
+        return amenities;
+    }
+    public void setAmenities(String amenities) {
+        this.amenities = amenities;
+    }
+
+    public double getTaxMultiplier(){
+        return taxMultiplier;
+    }
+
+    public void setTaxMultiplier(double taxMultiplier){
+        this.taxMultiplier = taxMultiplier;
+    }
+}
